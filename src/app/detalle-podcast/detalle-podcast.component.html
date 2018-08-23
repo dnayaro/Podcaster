@@ -1,0 +1,37 @@
+<div *ngIf="podcastDetalle" class="container-fluid">
+	<div class="row margin-top">
+		<div class="col-sm-3">
+			<app-podcast-lateral [podcastDetalle]="podcastDetalle"></app-podcast-lateral>
+		</div>
+		<!-- TODO mover a un nuevo componente-->
+		<div class="offset-sm-1 col-12 col-sm-7">
+			<div class="margin-bottom">
+				<div class="row margin-bottom">
+					<div class="col-12 box-shadow">
+						<h3>Episodes: {{podcastDetalle.episodes.length}}</h3>
+					</div>
+				</div>
+				<div class="row margin-bottom">
+					<div class="col-12 box-shadow">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">Title</th>
+									<th scope="col">Date</th>
+									<th scope="col">Duration</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let episode of podcastDetalle.episodes ">
+              						<th scope="row"><a routerLink="/podcast/{{ podcastDetalle.id }}/episode/{{ episode.id }}" routerLinkActive="active">{{ episode.title }}</a></th>
+              						<td>{{ episode.date | date:'dd/MM/y' }}</td>
+              						<td>{{ episode.duration | minutosSegundos}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>

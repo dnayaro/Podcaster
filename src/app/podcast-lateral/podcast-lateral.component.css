@@ -1,0 +1,22 @@
+.details-block{
+	border-top: 1px solid #cccccc;
+	margin-top: 10px;
+	padding:10px 0;
+}
+.details-text{
+	text-overflow: ellipsis;
+	margin-bottom: 30px;
+	margin-left: 15px;
+}
+.details-image a{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	}
+.details-image img{
+	width: 50%;
+	border-radius: 5%;
+}
+.details-block p{
+	font-style: italic;
+}

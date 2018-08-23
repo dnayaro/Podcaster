@@ -1,0 +1,20 @@
+<div *ngIf="podcastDetalle" class="container-fluid">
+	<div class="row margin-top">
+		<div class="col-12 col-sm-3">
+			<app-podcast-lateral [podcastDetalle]="podcastDetalle"></app-podcast-lateral>
+		</div>
+		<!-- TODO mover a un nuevo componente-->
+		<div class="offset-sm-1 col-12 col-sm-8">
+			<div class="row">
+				<div class="col-11 box-shadow">
+					<h4>{{podcastEpisode.title}}</h4>
+					<p class="description" innerHTML={{podcastEpisode.description}}></p>
+					<audio class="margin-top" controls="controls">
+						<source src="{{podcastEpisode.episodeUrl}}" type="{{podcastEpisode.type}}">
+							Su navegador no soporta elementos de audio
+					</audio>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

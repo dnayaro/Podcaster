@@ -1,0 +1,15 @@
+<div class="col-12 box-shadow details-text">
+	<div class="details-image">
+		<a routerLink="/podcast/{{podcastDetalle.id}}">
+			<img src="{{podcastDetalle.image}}"/>
+		</a>
+	</div>
+	<div class="details-block">
+		<h4>{{podcastDetalle.title}}</h4>
+		<p>by {{podcastDetalle.artist}} </p>
+	</div>
+	<div class="details-block">
+		<h5>Description</h5>
+		<p innerHtml={{podcastDetalle.description}}></p>
+	</div>
+</div>
